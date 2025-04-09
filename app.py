@@ -14,7 +14,7 @@ HTML_TEMPLATE = """
 <body>
     <h2>ニコニコ動画の動画IDを入力してください</h2>
     <form method="post">
-        <input type="text" name="video_id" placeholder="例: sm44830445" required>
+        <input type="text" name="video_id" placeholder="例: sm36735375" required>
         <button type="submit">サムネイル取得</button>
     </form>
     {% if thumbnail_url %}
