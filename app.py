@@ -6,20 +6,26 @@ app = Flask(__name__)
 
 HTML_TEMPLATE = """
 <!doctype html>
-<html lang="ja">
+<html lang=\"ja\">
 <head>
-    <meta charset="UTF-8">
+    <meta charset=\"UTF-8\">
     <title>ニコニコ動画サムネイル取得</title>
+    <meta property=\"og:title\" content=\"ニコニコ動画 サムネ取得ツール\" />
+    <meta property=\"og:description\" content=\"デバイス制限付き動画のサムネイル画像を取得できます。\" />
+    <meta property=\"og:image\" content=\"https://nico-thumb-app.onrender.com/static/ogp_nicovideo.png\" />
+    <meta property=\"og:url\" content=\"https://nico-thumb-app.onrender.com/\" />
+    <meta property=\"og:type\" content=\"website\" />
+    <meta name=\"twitter:card\" content=\"summary_large_image\" />
 </head>
 <body>
     <h2>ニコニコ動画の動画IDを入力してください</h2>
-    <form method="post">
-        <input type="text" name="video_id" placeholder="例: sm36735375" required>
-        <button type="submit">サムネイル取得</button>
+    <form method=\"post\">
+        <input type=\"text\" name=\"video_id\" placeholder=\"例: sm36735375\" required>
+        <button type=\"submit\">サムネイル取得</button>
     </form>
     {% if thumbnail_url %}
         <h3>サムネイル画像:</h3>
-        <img src="{{ thumbnail_url }}" alt="サムネイル">
+        <img src=\"{{ thumbnail_url }}\" alt=\"サムネイル\">
     {% elif error %}
         <p>{{ error }}</p>
     {% endif %}
