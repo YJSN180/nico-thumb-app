@@ -9,7 +9,7 @@ OGP_TEMPLATE = """
 <html lang=\"ja\">
 <head>
     <meta charset=\"UTF-8\">
-    <title>ニコニコ動画サムネ取得ツール</title>
+    <title>ニコニコ動画 サムネ取得ツール</title>
     <meta property=\"og:title\" content=\"ニコニコ動画 サムネ取得ツール\" />
     <meta property=\"og:description\" content=\"デバイス制限付き動画のサムネイル画像を取得できます。\" />
     <meta property=\"og:image\" content=\"https://nico-thumb-app.onrender.com/static/ogp_nicovideo.png\" />
@@ -18,8 +18,8 @@ OGP_TEMPLATE = """
     <meta name=\"twitter:card\" content=\"summary_large_image\" />
 </head>
 <body>
-    <p>このページはOGP対応用です。数秒後に移動します。</p>
-    <script>window.location.href = '/tool';</script>
+    <h1>ニコニコ動画 サムネ取得ツール</h1>
+    <p><a href=\"/tool\">▶ ツールはこちら</a></p>
 </body>
 </html>
 """
